@@ -2,19 +2,18 @@
 
 .title {
   font-family: $font-family;
-  @include adaptive-property(font-size, 4.25, 3, 3, rem);
-  @include adaptive-property(margin-bottom, 24, 8, 4);
+  @include adaptive-property(font-size, 1.25, 0, 2.25, rem);
+  margin-bottom: 0.5rem;
   font-weight: 600;
-  @include adaptive-property(line-height, 3, 3.5, 4.125, rem);
-  letter-spacing: -0.05em;
   color: $text-color-main;
+  line-height: 1.2;
+  color: inherit;
 }
 .subtitle {
   font-family: $font-family;
-  @include adaptive-property(font-size, 1.5, 2.5, 2.5, rem);
-  line-height: 150%; /* 36px/24 */
-  letter-spacing: -0.05em;
-  color: $text-color-main;
+  @include adaptive-property(font-size, 1, 0, 1.5, rem);
+  line-height: 1.2;
+  color: inherit;
 }
 //=================================BUTTON=============================
 .button {

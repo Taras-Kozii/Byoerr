@@ -1,0 +1,7 @@
+@use "../utils/_index" as *;
+
+.main {
+  &__section {
+    @include adaptive-property(padding-block, 40, 0, 120);
+  }
+}
