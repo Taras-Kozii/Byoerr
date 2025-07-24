@@ -6,8 +6,7 @@
     <title>Byoerr</title>
     <link rel="shortcut icon" href="" type="image/x-icon" />
     <!-- ПЕРЕДЗАВАНТАЖЕННЯ КАРТИНОК -->
-    <link rel="preload" as="image" href="" media="(max-width: 766px)" />
-    <link rel="preload" as="image" href="" media="(min-width: 767px)" />
+    <link rel="preload" as="image" href="./images/hero/hero.webp" />
     <!-- ШРИФТИ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -61,7 +60,18 @@
 
       <main class="main">
         <section class="main__section hero">
-          <div class="hero__container"></div>
+          <div class="hero__img">
+            <img
+              src="./images/hero/hero.webp"
+              alt="hero-img"
+              width="320"
+              height="700"
+              decoding="async"
+            />
+          </div>
+          <div class="hero__container">
+            <a href="#" class="button"><span>Read more</span></a>
+          </div>
         </section>
       </main>
       <section class="main__section about">
