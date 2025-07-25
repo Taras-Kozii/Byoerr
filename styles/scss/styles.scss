@@ -1,4 +1,5 @@
 @use "./utils/index" as *;
+@use "./effects/link-effects" as *;
 
 @use "./blocks/page";
 @use "./blocks/components";
@@ -6,3 +7,4 @@
 @use "./blocks/menu";
 @use "./blocks/main";
 @use "./blocks/hero";
+@use "./blocks/footer";

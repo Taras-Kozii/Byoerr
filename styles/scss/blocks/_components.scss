@@ -9,12 +9,14 @@
   line-height: 1.2;
   color: inherit;
 }
+
 .subtitle {
   font-family: $font-family;
   @include adaptive-property(font-size, 1, 0, 1.5, rem);
   line-height: 1.2;
   color: inherit;
 }
+
 //=================================BUTTON=============================
 .button {
   width: fit-content;
@@ -41,13 +43,18 @@
   backdrop-filter: blur($blur);
   background: rgba(255, 255, 255, 0.08);
 }
+
 // ==============================LOGO
 .logo {
+  width: fit-content;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  row-gap: 16px;
+  cursor: pointer;
+
   &__img {
     display: block;
-    @include adaptive-property(width, 42, 0, 60);
+    width: 40px;
     aspect-ratio: 1 / 1;
     @include ibg;
   }

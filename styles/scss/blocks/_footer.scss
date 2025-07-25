@@ -1,0 +1,57 @@
+@use "../utils/_index" as *;
+
+.footer {
+  background-color: $bg-color-2;
+  @include adaptive-property(padding-block, 40, 0, 120);
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__left {
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.625rem;
+  }
+
+  .logo__img {
+    width: 80px;
+  }
+
+  .logo__title {
+    @include adaptive-property(font-size, 24, 0, 36);
+    font-weight: 600;
+  }
+
+  &__right {
+    display: flex;
+    @include adaptive-property(column-gap, 60, 0, 160);
+  }
+
+  &__subtitle {
+    line-height: 1.4;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.list-footer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+
+  &__link {
+    font-size: 1rem;
+  }
+}
+
+.socials {
+  display: flex;
+  column-gap: 32px;
+}
