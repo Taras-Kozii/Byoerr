@@ -14,7 +14,7 @@
   font-family: $font-family;
   @include adaptive-property(font-size, 1, 0, 1.5, rem);
   line-height: 1.2;
-  color: inherit;
+  color: #ecdcecee;
 }
 
 //=================================BUTTON=============================
