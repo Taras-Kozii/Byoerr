@@ -9,6 +9,7 @@
   color: $text-color-main;
   font-family: $font-family;
   @include adaptive-property(font-size, 0.875, 0, 1.25, rem);
+  line-height: 1.6;
   font-optical-sizing: auto;
   font-style: normal;
 	overflow-x: clip;
