@@ -1,0 +1,63 @@
+@use "../utils/_index.scss" as *;
+
+.destinations {
+  background-color: $bg-color-main;
+}
+
+.swiper.destinations-slider {
+  min-width: 0;
+  @include adaptive-property(width, 280, 0, 1280);
+
+
+
+  .swiper-wrapper.destinations-slider__items {
+    align-items: center;
+    margin-inline: auto;
+    overflow: hidden;
+  }
+}
+
+.slide-destinations {
+  @include adaptive-property(width, 200, 0, 296);
+  flex-shrink: 0;
+  aspect-ratio: 0.6727 / 1;
+  cursor: pointer;
+  transition: $transition-duraction;
+
+  &__body {
+    width: 100%;
+    height: 100%;
+    @include adaptive-property(padding, 20, 0, 40);
+    position: relative;
+    overflow: hidden;
+    border-radius: $radius-s;
+
+    @include on-tablet {
+      border-radius: $radius-l;
+    }
+  }
+
+  &__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+  }
+
+  &__title {
+    margin-top: auto;
+
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include ibg;
+    z-index: -1;
+  }
+}

@@ -1,13 +1,13 @@
 'use strict';
 
-// import { initSlider } from './sliders.js';
+import { initSlider } from './slider.js';
 // import { initNavigation } from './menu.js';
 import { initForms } from './forms.js';
 // import { initImageTranslate } from './hover-efects.js';
 // import { watcherAnim, watcherToggle, countAnimate } from './animation.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  // initSlider();
+  initSlider();
   // initNavigation();
   initForms();
 

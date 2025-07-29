@@ -52,6 +52,15 @@
   }
 }
 
+.button--small {
+  padding-block: 0.8rem;
+  padding-inline: 2.5rem;
+
+  font-size: 1rem;
+  line-height: 1.4;
+  border-radius: 8px;
+}
+
 // ==============================LOGO
 .logo {
   width: fit-content;
@@ -70,6 +79,7 @@
 
 // =================================SCROLL
 .scroll-left {
+  height: 150px;
   direction: rtl;
   overflow-y: auto;
 
