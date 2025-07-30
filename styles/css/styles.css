@@ -765,12 +765,21 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 1rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  text-align: left;
 }
 .slide-destinations__title {
   margin-top: auto;
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+@media (max-width: 1440px) {
+  .slide-destinations__title {
+    font-size: calc(1.2rem + (0.55) * (100vw - 20rem) / (70));
+  }
+}
+.slide-destinations p {
+  line-height: 1.4;
 }
 .slide-destinations__img {
   width: 100%;
