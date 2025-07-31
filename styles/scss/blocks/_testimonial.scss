@@ -1,0 +1,19 @@
+@use "../utils/_index.scss" as *;
+
+.testimonial {
+  background-color: $bg-color-main;
+}
+.slide-testimonial {
+  &__body {
+    @include adaptive-property(padding-inline, 20, 0, 40);
+    @include adaptive-property(padding-inline, 32, 0, 64);
+  }
+
+  &__body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+  }
+}

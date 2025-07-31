@@ -161,29 +161,29 @@
         </section>
         <section class="main__section destinations">
           <div class="destinations__container">
-            <div class="swiper destinations-slider">
-              <div class="destinations-slider__body">
-                <div class="destinations-slider__top">
+            <div class="swiper slider destinations-slider">
+              <div class="slider__body destinations-slider__body">
+                <div class="slider__top">
                   <div class="destinations-slider__top-text">
                     <h2 class="destinations-slider__title title">Destinations</h2>
                 <h4 class="destinations-slider__subtitle subtitle">
                   Discover the various breathtaking locations
                 </h4>
                   </div>
-                  <div class="destinations-slider__buttons">
-          <div class="destinations-slider__prev">
-                  <img src="./images/icons/arrow-right.svg" alt="arrow" />
+                  <div class="slider__buttons">
+                  <div class="slider__button slider__button--prev destinations-slider__prev">
+                    <img src="./images/icons/arrow-right.svg" alt="arrow" />
                 </div>
-                <div class="destinations-slider__next">
+                <div class="slider__button slider__button--next destinations-slider__next">
                   <img src="./images/icons/arrow-right.svg" alt="arrow" />
                 </div>
                   </div>
                 </div>
-                <div class="swiper-wrapper destinations__items">
+                <div class="swiper-wrapper">
                   <div
-                    class="swiper-slide destinations-slider__item slide-destinations"
+                    class="swiper-slide slide destinations-slider__item slide-destinations"
                   >
-                    <div class="slide-destinations__body">
+                    <div class="slide__body slide-destinations__body">
                       <div class="slide-destinations__img">
                         <img
                           src="./images/destinations/destinations-1.webp"
@@ -212,9 +212,9 @@
                     </div>
                   </div>
                   <div
-                    class="swiper-slide destinations-slider__item slide-destinations"
+                    class="swiper-slide slide destinations-slider__item slide-destinations"
                   >
-                    <div class="slide-destinations__body">
+                    <div class="slide__body slide-destinations__body">
                       <div class="slide-destinations__img">
                         <img
                           src="./images/destinations/destinations-2.webp"
@@ -243,9 +243,9 @@
                     </div>
                   </div>
                   <div
-                    class="swiper-slide destinations-slider__item slide-destinations"
+                    class="swiper-slide slide destinations-slider__item slide-destinations"
                   >
-                    <div class="slide-destinations__body">
+                    <div class="slide__body slide-destinations__body">
                       <div class="slide-destinations__img">
                         <img
                           src="./images/destinations/destinations-3.webp"
@@ -257,8 +257,8 @@
                         />
                       </div>
                       <div class="slide-destinations__content">
-                        <h4 class="slide-destinations__title" style="--delay: 0.2s">Bunaken Sea</h4>
-                        <div class="slide-destinations__text" style="--delay: 0.4s">
+                        <h4 class="slide-destinations__title">Bunaken Sea</h4>
+                        <div class="slide-destinations__text">
                           <p>
                             Lorem ipsum dolor sit amet consectetur. In at amet
                             semper
@@ -267,7 +267,6 @@
                         <a
                           href="#"
                           class="button button--small slide-destinations__button"
-                          style="--delay: 0.4s"
                         >
                           <span>View details</span>
                         </a>
@@ -275,9 +274,9 @@
                     </div>
                   </div>
                   <div
-                    class="swiper-slide destinations-slider__item slide-destinations"
+                    class="swiper-slide slide destinations-slider__item slide-destinations"
                   >
-                    <div class="slide-destinations__body">
+                    <div class="slide__body slide-destinations__body">
                       <div class="slide-destinations__img">
                         <img
                           src="./images/destinations/destinations-2.webp"
@@ -306,7 +305,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="destinations-slider__dots"></div>
+                <div class="slider__dots destinations-slider__dots"></div>
               </div>
           </div>
         </section>
@@ -407,7 +406,119 @@
           </div>
         </section>
         <section class="main__section testimonial">
-          <div class="testimonial__container"></div>
+          <div class="testimonial__container">
+              <div class="swiper slider testimonial-slider">
+              <div class="slider__body testimonial-slider__body">
+                <div class="slider__top">
+                  <div class="testimonial-slider__top-text">
+                    <h2 class="testimonial-slider__title title">Testimonial</h2>
+                <h4 class="testimonial-slider__subtitle subtitle">
+                  What our clients say about us
+                </h4>
+                  </div>
+                  <div class="slider__buttons">
+                  <div class="slider__button slider__button--prev testimonial-slider__prev">
+                    <img src="./images/icons/arrow-right.svg" alt="arrow" />
+                </div>
+                <div class="slider__button slider__button--next testimonial-slider__next">
+                  <img src="./images/icons/arrow-right.svg" alt="arrow" />
+                </div>
+                  </div>
+                </div>
+                <div class="swiper-wrapper">
+                  <div
+                    class="swiper-slide slide testimonial-slider__item slide-testimonial"
+                  >
+                    <div class="slide__body slide-testimonial__body">
+                      <div class="slide-testimonial__top">
+                        <div class="slide-testimonial__img">
+                          <img src="./images/testimonials/testimonial-1.webp" alt="user-photo" width="100" height="100"   decoding="async" 
+  loading="lazy" 
+>
+                        </div>
+                        <div class="slide-testimonial__info">
+                          <h4 class="slide-testimonial__name">Michael Wong</h4>
+                          <div class="slide-testimonial__raiting"></div>
+                        </div>
+                      </div>
+                      <div class="slide-testimonial__text">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                                    <div
+                    class="swiper-slide slide testimonial-slider__item slide-testimonial"
+                  >
+                    <div class="slide__body slide-testimonial__body">
+                      <div class="slide-testimonial__top">
+                        <div class="slide-testimonial__img">
+                          <img src="./images/testimonials/testimonial-2.webp" alt="user-photo" width="100" height="100"   decoding="async" 
+  loading="lazy" 
+>
+                        </div>
+                        <div class="slide-testimonial__info">
+                          <h4 class="slide-testimonial__name">Avril Song</h4>
+                          <div class="slide-testimonial__raiting"></div>
+                        </div>
+                      </div>
+                      <div class="slide-testimonial__text">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                                    <div
+                    class="swiper-slide slide testimonial-slider__item slide-testimonial"
+                  >
+                    <div class="slide__body slide-testimonial__body">
+                      <div class="slide-testimonial__top">
+                        <div class="slide-testimonial__img">
+                          <img src="./images/testimonials/testimonial-3.webp" alt="user-photo" width="100" height="100"   decoding="async" 
+  loading="lazy" 
+>
+                        </div>
+                        <div class="slide-testimonial__info">
+                          <h4 class="slide-testimonial__name">Jeane Wood</h4>
+                          <div class="slide-testimonial__raiting"></div>
+                        </div>
+                      </div>
+                      <div class="slide-testimonial__text">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                                    <div
+                    class="swiper-slide slide testimonial-slider__item slide-testimonial"
+                  >
+                    <div class="slide__body slide-testimonial__body">
+                      <div class="slide-testimonial__top">
+                        <div class="slide-testimonial__img">
+                          <img src="./images/testimonials/testimonial-2.webp" alt="user-photo" width="100" height="100"   decoding="async" 
+  loading="lazy" 
+>
+                        </div>
+                        <div class="slide-testimonial__info">
+                          <h4 class="slide-testimonial__name">Avril Song</h4>
+                          <div class="slide-testimonial__raiting"></div>
+                        </div>
+                      </div>
+                      <div class="slide-testimonial__text">
+                        <p>
+                          Lorem ipsum dolor sit amet consectetur. Scelerisque urna vel sit dolor fringilla volutpat lectus amet. Integer sed pretium odio lectus at malesuada sed eget nunc.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                <div class="slider__dots testimonial-slider__dots"></div>
+              </div>
+          </div>
+          </div>
         </section>
         <section class="main__section contact">
           <div class="contact__img">

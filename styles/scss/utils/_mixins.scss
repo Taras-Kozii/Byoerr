@@ -192,16 +192,16 @@
   font-weight: 500;
   font-style: normal;
 }
-@mixin hover($selector: &) {
+@mixin hover() {
   @media (hover: hover) and (pointer: fine) {
-    #{$selector}:hover,
-    #{$selector}:focus-within {
+    &:hover,
+    &:focus-within {
       @content;
     }
   }
 
   @media (hover: none) {
-    #{$selector}:focus-within {
+    &:focus-within {
       @content;
     }
   }

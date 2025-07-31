@@ -3,6 +3,7 @@
 
 @use "./blocks/page";
 @use "./blocks/components";
+@use "./blocks/slider";
 @use "./blocks/header";
 @use "./blocks/menu";
 @use "./blocks/main";
@@ -10,5 +11,6 @@
 @use "./blocks/about";
 @use "./blocks/destinations";
 @use "./blocks/packages";
+@use "./blocks/testimonial";
 @use "./blocks/footer";
 @use "./blocks/contact";
