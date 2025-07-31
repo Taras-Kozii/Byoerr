@@ -6,24 +6,31 @@
 
 //Percent
 @function percent($px, $from: 100) {
-	$result: math.div($px, $from) * 100%;
-	@return $result;
+  $result: math.div($px, $from) * 100%;
+  @return $result;
 }
 //REM
 @function to-rem($px, $current: 16) {
-	$result: math.div($px, $current) + rem;
-	@return $result;
+  $result: math.div($px, $current) + rem;
+  @return $result;
 }
 //EM
 @function to-em($px, $current: 16) {
-	$result: math.div($px, $current) + em;
-	@return $result;
+  $result: math.div($px, $current) + em;
+  @return $result;
 }
 
-@function get-value($min-width, $max-width, $size-at-min-width, $size-at-max-width, $unit) {
+@function get-value(
+  $min-width,
+  $max-width,
+  $size-at-min-width,
+  $size-at-max-width,
+  $unit
+) {
   $return-value: calc(
-    #{$size-at-min-width + $unit} + (#{$size-at-max-width - $size-at-min-width}) * ((100vw - #{$min-width + $unit}) /
-          (#{$max-width - $min-width}))
+    #{$size-at-min-width + $unit} + (
+        #{$size-at-max-width - $size-at-min-width}
+      ) * ((100vw - #{$min-width + $unit}) / (#{$max-width - $min-width}))
   );
   @return $return-value;
 }
@@ -126,14 +133,14 @@
 // GRID
 
 @mixin grid-cards($type: fit, $min: 280px, $max: 1fr, $gap: 30px) {
-	display: grid;
-	gap: $gap;
-	grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
+  display: grid;
+  gap: $gap;
+  grid-template-columns: repeat(auto-#{$type}, minmax($min, $max));
 }
 @mixin grid-container($quantity, $column-gap, $row-gap) {
-	display: grid;
-	min-width: 0;
-	grid-template-columns: repeat($quantity, minmax(280px, 1fr));
+  display: grid;
+  min-width: 0;
+  grid-template-columns: repeat($quantity, minmax(280px, 1fr));
   column-gap: $column-gap;
   row-gap: $row-gap;
 }
@@ -161,22 +168,22 @@
 
 // Трикутник
 @mixin triangle($direction, $color, $size, $size2: $size) {
-	@if $direction == left {
-		border: #{$size2}px solid transparent;
-		border-right: #{$size}px solid $color;
-	}
-	@if $direction == right {
-		border: #{$size2}px solid transparent;
-		border-left: #{$size}px solid $color;
-	}
-	@if $direction == top {
-		border: #{$size2}px solid transparent;
-		border-bottom: #{$size}px solid $color;
-	}
-	@if $direction == bottom {
-		border: #{$size2}px solid transparent;
-		border-top: #{$size}px solid $color;
-	}
+  @if $direction == left {
+    border: #{$size2}px solid transparent;
+    border-right: #{$size}px solid $color;
+  }
+  @if $direction == right {
+    border: #{$size2}px solid transparent;
+    border-left: #{$size}px solid $color;
+  }
+  @if $direction == top {
+    border: #{$size2}px solid transparent;
+    border-bottom: #{$size}px solid $color;
+  }
+  @if $direction == bottom {
+    border: #{$size2}px solid transparent;
+    border-top: #{$size}px solid $color;
+  }
 }
 
 @mixin font-outfit {
@@ -184,4 +191,32 @@
   font-optical-sizing: auto;
   font-weight: 500;
   font-style: normal;
+}
+@mixin hover($selector: &) {
+  @media (hover: hover) and (pointer: fine) {
+    #{$selector}:hover,
+    #{$selector}:focus-within {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    #{$selector}:focus-within {
+      @content;
+    }
+  }
+}
+@mixin hover-pseudo($pseudo) {
+  @media (hover: hover) and (pointer: fine) {
+    &:hover#{$pseudo},
+    &:focus-within#{$pseudo} {
+      @content;
+    }
+  }
+
+  @media (hover: none) {
+    &:focus-within#{$pseudo} {
+      @content;
+    }
+  }
 }

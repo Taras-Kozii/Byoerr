@@ -5,7 +5,6 @@
   display: inline-block;
   white-space: nowrap;
 
-
   &::before {
     content: attr(data-text);
     position: absolute;
@@ -18,7 +17,7 @@
     transition: max-width $transition-duraction ease-in-out;
   }
 
-  &:hover::before {
+  @include hover-pseudo("::before") {
     max-width: 100%;
   }
 }

@@ -2,15 +2,27 @@
 
 .destinations {
   background-color: $bg-color-main;
+  &__top {
+    width: fit-content;
+  }
 }
 
-.swiper.destinations-slider {
+.destinations-slider {
   min-width: 0;
   @include adaptive-property(width, 280, 0, 1280);
-
-
-
-  .swiper-wrapper.destinations-slider__items {
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    @include adaptive-property(margin-bottom, 40, 0, 80);
+  }
+  &__buttons {
+    display: flex;
+    column-gap: 36px;
+  }
+  &__items {
     align-items: center;
     margin-inline: auto;
     overflow: hidden;
@@ -44,6 +56,13 @@
     flex-direction: column;
     row-gap: 1rem;
     text-align: left;
+
+    opacity: 0;
+    transform: translate(0, 100px);
+    filter: blur(33px);
+    transition: opacity, transform, filter;
+    transition-duration: $transition-duraction;
+    transition-timing-function: ease-in-out;
   }
 
   &__title {
@@ -65,5 +84,13 @@
     top: 0;
     @include ibg;
     z-index: -1;
+  }
+}
+
+.destinations-slider__item {
+  @include hover-pseudo(" .slide-destinations__content") {
+    opacity: 1;
+    transform: translate(0, 0);
+    filter: blur(0);
   }
 }

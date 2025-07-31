@@ -107,8 +107,15 @@ h6 {
   -webkit-transition: max-width 0.3s ease-in-out;
   transition: max-width 0.3s ease-in-out;
 }
-.fill-color:hover::before {
-  max-width: 100%;
+@media (hover: hover) and (pointer: fine) {
+  .fill-color:hover::before, .fill-color:focus-within::before {
+    max-width: 100%;
+  }
+}
+@media (hover: none) {
+  .fill-color:focus-within::before {
+    max-width: 100%;
+  }
 }
 
 .page {
@@ -704,17 +711,50 @@ h6 {
 .destinations {
   background-color: #012E4D;
 }
+.destinations__top {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 
-.swiper.destinations-slider {
+.destinations-slider {
   min-width: 0;
   width: 1280px;
 }
 @media (max-width: 1440px) {
-  .swiper.destinations-slider {
+  .destinations-slider {
     width: calc(280px + (1000) * (100vw - 320px) / (1120));
   }
 }
-.swiper.destinations-slider .swiper-wrapper.destinations-slider__items {
+.destinations-slider__top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  row-gap: 1.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 80px;
+}
+@media (max-width: 1440px) {
+  .destinations-slider__top {
+    margin-bottom: calc(40px + (40) * (100vw - 320px) / (1120));
+  }
+}
+.destinations-slider__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 36px;
+     -moz-column-gap: 36px;
+          column-gap: 36px;
+}
+.destinations-slider__items {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -766,6 +806,20 @@ h6 {
           flex-direction: column;
   row-gap: 1rem;
   text-align: left;
+  opacity: 0;
+  -webkit-transform: translate(0, 100px);
+      -ms-transform: translate(0, 100px);
+          transform: translate(0, 100px);
+  -webkit-filter: blur(33px);
+          filter: blur(33px);
+  -webkit-transition: opacity, -webkit-transform, -webkit-filter;
+  transition: opacity, -webkit-transform, -webkit-filter;
+  transition: opacity, transform, filter;
+  transition: opacity, transform, filter, -webkit-transform, -webkit-filter;
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
 }
 .slide-destinations__title {
   margin-top: auto;
@@ -797,6 +851,27 @@ h6 {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .destinations-slider__item:hover .slide-destinations__content, .destinations-slider__item:focus-within .slide-destinations__content {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
+}
+@media (hover: none) {
+  .destinations-slider__item:focus-within .slide-destinations__content {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+        -ms-transform: translate(0, 0);
+            transform: translate(0, 0);
+    -webkit-filter: blur(0);
+            filter: blur(0);
+  }
 }
 
 .packages {
