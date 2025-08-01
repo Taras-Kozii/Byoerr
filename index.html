@@ -49,6 +49,41 @@
                 height="42"
               />
             </a>
+            <div class="header__menu menu">
+  <nav class="menu__body">
+    <ul class="menu__list">
+      <li class="menu__item">
+        <a href="#" class="menu__link hover-underline" data-goto=".about"
+          ><span>About us</span></a
+        >
+      </li>
+            <li class="menu__item">
+        <a href="#" class="menu__link hover-underline" data-goto=".destinations"
+          ><span>Destinations</span></a
+        >
+      </li>
+            <li class="menu__item">
+        <a href="#" class="menu__link hover-underline" data-goto=".packages"
+          ><span>Packages</span></a
+        >
+      </li>
+            <li class="menu__item">
+        <a href="#" class="menu__link hover-underline" data-goto=".testimonial"
+          ><span>Testimonial</span></a
+        >
+      </li>
+            <li class="menu__item">
+        <a href="#" class="menu__link hover-underline" data-goto=".contact"
+          ><span>Contact Us</span></a
+        >
+      </li>
+    </ul>
+  </nav>
+  <button class="burger" aria-label="burger-icon">
+    <span></span>
+  </button>
+</div>
+
           </div>
         </div>
       </header>
@@ -304,7 +339,39 @@
                       </div>
                     </div>
                   </div>
+                  <div
+                    class="swiper-slide slide destinations-slider__item slide-destinations"
+                  >
+                    <div class="slide__body slide-destinations__body">
+                      <div class="slide-destinations__img">
+                        <img
+                          src="./images/destinations/destinations-3.webp"
+                          alt="destinations-slide"
+                          decoding="async"
+                          width="200"
+                          height="200"
+                          loading="lazy"
+                        />
+                      </div>
+                      <div class="slide-destinations__content">
+                        <h4 class="slide-destinations__title">Bunaken Sea</h4>
+                        <div class="slide-destinations__text">
+                          <p>
+                            Lorem ipsum dolor sit amet consectetur. In at amet
+                            semper
+                          </p>
+                        </div>
+                        <a
+                          href="#"
+                          class="button button--small slide-destinations__button"
+                        >
+                          <span>View details</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+                
                 <div class="slider__dots destinations-slider__dots"></div>
               </div>
           </div>
@@ -682,6 +749,7 @@
                       href="#"
                       class="footer__link list-footer__link fill-color"
                       data-text="About us"
+                      data-goto=".about"
                       >About us</a
                     >
                   </li>
@@ -690,6 +758,7 @@
                       href="#"
                       class="footer__link list-footer__link fill-color"
                       data-text="Testimonial"
+                      data-goto=".testimonial"
                       >Testimonial</a
                     >
                   </li>

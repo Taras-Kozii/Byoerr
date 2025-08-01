@@ -33,7 +33,7 @@
     cursor: pointer;
     transition: scale, $transition-duraction ease-in-out;
     @include hover {
-      scale: 1.02;
+      box-shadow: inset 4px 2px 4px 50px #d6d5d5;
     }
   }
   &__button--prev {
@@ -62,7 +62,6 @@
 .slide {
   @include adaptive-property(width, 200, 0, 296);
   flex-shrink: 0;
-  aspect-ratio: 0.6727 / 1;
   cursor: pointer;
   transition: $transition-duraction;
 

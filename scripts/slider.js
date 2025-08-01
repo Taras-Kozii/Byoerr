@@ -15,6 +15,7 @@ export function initSlider() {
     },
     autoHeight: true,
     initialSlide: 1,
+    watchOverflow: false,
     on: {
       slideChangeTransitionEnd() {
         this.updateAutoHeight();
@@ -39,7 +40,7 @@ export function initSlider() {
       spaceBetween: 26,
 		},
 		992: {
-			slidesPerView: 3,
+			slidesPerView: 4,
       spaceBetween: 32,
 		}
 	},

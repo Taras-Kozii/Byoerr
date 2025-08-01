@@ -4,6 +4,7 @@
   background-color: $bg-color-main;
 }
 .slide-destinations {
+  aspect-ratio: 0.6727 / 1;
   &__body {
     @include adaptive-property(padding, 20, 0, 40);
   }
