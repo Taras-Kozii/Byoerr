@@ -3,10 +3,10 @@
 import { initSlider } from './slider.js';
 import { initNavigation } from './menu.js';
 import { initForms } from './forms.js';
-// import { initImageTranslate } from './hover-efects.js';
-// import { watcherAnim, watcherToggle, countAnimate } from './animation.js';
+import { initHeader } from './header.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+  initHeader();
   initSlider();
   initNavigation();
   initForms();

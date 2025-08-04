@@ -1,16 +1,18 @@
 @use "../utils/_index" as *;
 
 .header {
-  position: sticky;
+  position: fixed;
   top: 0;
   right: 0;
   left: 0;
   z-index: 50;
-  background: #000;
+  transition: $transition-duraction;
   &__content {
     width: 100%;
     padding: 10px 0;
     @include flex(space-between);
+    align-items: center;
+    column-gap: 10px;
   }
   &__menu {
     @include flex(space-between, center);
@@ -20,4 +22,21 @@
     @include position-r;
     z-index: 5;
   }
+}
+.header.scrolling {
+  background: rgba(56, 152, 221, 0.05);
+  backdrop-filter: blur(9px);
+  .menu__link {
+    color: $text-color-main;
+  }
+
+  svg path {
+    stroke: #fff;
+  }
+}
+
+.header.hidden {
+  opacity: 0;
+  transform: translateY(-30px);
+  color: $bg-color-2;
 }

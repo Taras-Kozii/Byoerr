@@ -18,6 +18,12 @@
     align-items: center;
   }
   &__content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__text-content {
     max-width: 640px;
     display: flex;
     flex-direction: column;
@@ -32,5 +38,26 @@
   &__text p {
     @include adaptive-property(font-size, 1, 0, 1.25, rem);
     line-height: 1.6;
+  }
+  &__play {
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur($blur);
+    background: rgba(255, 255, 255, 0.08);
+    svg {
+      width: 34.375%;
+      height: 40.625%;
+      transform: translateX(20%);
+      object-fit: contain;
+      object-position: center;
+    }
+    @include adaptive-property(width, 120, 0, 240);
+    @include adaptive-property(height, 120, 0, 240);
+    @include adaptive-property(margin-block, 100, 20, 0);
   }
 }

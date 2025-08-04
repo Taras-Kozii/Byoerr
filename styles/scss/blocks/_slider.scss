@@ -2,7 +2,6 @@
 
 .slider {
   min-width: 0;
-  @include adaptive-property(width, 280, 0, 1280);
   &__body {
     display: flex;
     flex-direction: column;
@@ -23,17 +22,20 @@
     }
   }
   &__button {
-    @include adaptive-property(width, 30, 0, 60);
-    @include adaptive-property(height, 30, 0, 60);
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    border: 2px solid $text-color-main;
     cursor: pointer;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur($blur);
+    background: rgba(255, 255, 255, 0.08);
     transition: scale, $transition-duraction ease-in-out;
+    @include adaptive-property(width, 30, 0, 60);
+    @include adaptive-property(height, 30, 0, 60);
     @include hover {
-      box-shadow: inset 4px 2px 4px 50px #d6d5d5;
+      backdrop-filter: blur(24px);
+      background: rgba(255, 255, 255, 0.2);
     }
   }
   &__button--prev {
@@ -57,13 +59,14 @@
       background-color: #fff;
     }
   }
+  @include adaptive-property(width, 280, 0, 1280);
 }
 
 .slide {
-  @include adaptive-property(width, 200, 0, 296);
   flex-shrink: 0;
   cursor: pointer;
   transition: $transition-duraction;
+  @include adaptive-property(width, 200, 0, 296);
 
   &__body {
     width: 100%;

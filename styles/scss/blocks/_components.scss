@@ -2,19 +2,19 @@
 
 .title {
   font-family: $font-family;
-  @include adaptive-property(font-size, 1.25, 0, 2.25, rem);
   margin-bottom: 0.5rem;
   font-weight: 600;
   color: $text-color-main;
   line-height: 1.2;
   color: inherit;
+  @include adaptive-property(font-size, 1.25, 0, 2.25, rem);
 }
 
 .subtitle {
   font-family: $font-family;
-  @include adaptive-property(font-size, 1, 0, 1.5, rem);
   line-height: 1.2;
   color: #ecdcecee;
+  @include adaptive-property(font-size, 1, 0, 1.5, rem);
 }
 
 //=================================BUTTON=============================
@@ -30,25 +30,24 @@
   align-items: center;
   column-gap: 1rem;
 
-  @include adaptive-property(font-size, 1, 0, 1.5, rem);
   line-height: 1.4;
   letter-spacing: -0.002em;
   color: $text-color-main;
 
   border-radius: $radius-s;
-  border: 1px solid currentColor;
-  transition: $transition-duraction;
   cursor: pointer;
   z-index: 1;
   overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur($blur);
   background: rgba(255, 255, 255, 0.08);
+  @include adaptive-property(font-size, 1, 0, 1.5, rem);
 
   img {
-    @include adaptive-property(width, 24, 0, 34);
     aspect-ratio: 1 / 1;
     object-position: center;
     object-fit: cover;
+    @include adaptive-property(width, 24, 0, 34);
   }
 }
 
@@ -83,7 +82,7 @@
   direction: rtl;
   overflow-y: auto;
 
-  >p {
+  > p {
     direction: ltr;
     @include adaptive-property(padding-left, 20, 0, 32);
   }
@@ -93,10 +92,30 @@
   }
 
   &::-webkit-scrollbar-track {
-    background: #0097FF;
+    background: #0097ff;
   }
 
   &::-webkit-scrollbar-thumb:hover {
-    background-color: #0097FF;
+    background-color: #0097ff;
+  }
+}
+
+//=====================================SEARCH
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+
+  svg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+  @media (max-width: 1024.9px) {
+    display: none;
   }
 }

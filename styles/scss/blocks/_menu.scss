@@ -9,7 +9,12 @@
       height: 100svh;
       width: 100%;
       padding: 100px 30px 30px;
-      background: linear-gradient(0deg, #f0eeee 0%, #f5f5f5 40%, #5f5f6b 100%);
+      background: linear-gradient(
+        0deg,
+        $bg-color-main 0%,
+        #3898dd 70%,
+        #fff 100%
+      );
       transition: $transition-duraction;
       overflow: auto;
 
@@ -17,10 +22,10 @@
         content: "";
         position: fixed;
         width: 100%;
-        height: 80px;
+        min-height: 88px;
         left: -100%;
         top: 0;
-        background: rgba(95, 95, 107, 0.1);
+        background: rgba(56, 152, 221, 0.05);
         backdrop-filter: blur(5px);
         transition: $transition-duraction;
         z-index: 2;
@@ -30,28 +35,30 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      row-gap: 2rem;
+      row-gap: 3rem;
+    }
+    &__link {
+      font-size: 1.5rem;
+      color: $text-color-main;
     }
   }
   @media (min-width: 1025px) {
     &__list {
-      padding-block: 22px;
+      padding-block: 24px;
       display: flex;
       flex-direction: row;
       align-items: center;
       flex-wrap: wrap;
-      column-gap: 80px;
+      column-gap: 40px;
       row-gap: 1.5rem;
     }
   }
   &__link {
-    @include adaptive-property(font-size, 1.5, 1.125, 1.125, rem);
-    @include position-r;
     display: inline-block;
-    font-weight: 500;
-    line-height: 36px;
-    letter-spacing: -0.004em;
-    color: #eee8de;
+    line-height: 1.2;
+    color: $bg-color-2;
+    @include position-r;
+    @include adaptive-property(font-size, 2, 1.125, 1.125, rem);
   }
 }
 .menu__body.open {
@@ -62,12 +69,12 @@
 }
 .burger {
   @media (max-width: 1024px) {
-    @include position-r;
     display: block;
-    @include adaptive-property(width, 2, 2.875, 2.875, rem);
-    @include adaptive-property(height, 1.125, 1.625, 1.625, rem);
-    cursor: pointer;
     z-index: 5;
+    @include position-r;
+    @include adaptive-property(width, 32, 44, 44);
+    @include adaptive-property(height, 18, 22, 22);
+    cursor: pointer;
 
     &::before,
     &::after,
@@ -79,7 +86,7 @@
       width: 100%;
       height: 2px;
       border-radius: 10px;
-      background-color: #324052;
+      background-color: $bg-color-2;
       transition: $transition-duraction;
       cursor: pointer;
       @include on-mobile-l {
@@ -98,7 +105,9 @@
       transform: translateY(-50%);
     }
   }
-  display: none;
+  @media (min-width: 1025px) {
+    display: none;
+  }
 }
 .burger.active {
   &::before {

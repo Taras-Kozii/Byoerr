@@ -56,7 +56,6 @@
 
   @if ($tablet-size == 0) {
     #{$property}: $desktop-size + $unit;
-
     @media (max-width: 1440px) {
       #{$property}: get-value(
         $min-width,
@@ -148,8 +147,10 @@
 // ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 @mixin position-r {
-  position: relative;
-  inset: 0;
+  & {
+    position: relative;
+    inset: 0;
+  }
 }
 @mixin ibg($size: cover) {
   overflow: hidden;
