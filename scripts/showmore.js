@@ -1,7 +1,29 @@
 'use strict';
 
+import { setCSSProperty } from "./functions.js";
+
+
+
 export function initShowMore() {
 	const showMoreBlocks = document.querySelectorAll('[data-showmore]');
+
+	if (showMoreBlocks.length) {
+		showMoreBlocks.forEach(block => {
+			const showMoreContent = block.querySelector('[data-showmore-content]');
+			const step = showMoreContent.dataset.showmoreContent;
+			const type = block.dataset.showmore;
+
+				if(type == 'items') {
+					const items = block.querySelectorAll('li');
+					items.forEach((item, index) => {
+						if (index > (parseFloat(step) - 1)) {
+							setCSSProperty(item, '--height', '0');
+							setCSSProperty(item, '--overflow', 'hidden');
+				}
+		})
+	}
+		})
+	}
 	const showMoreButtons = document.querySelectorAll('[data-showmore-button]');
 
 	if (showMoreButtons.length) {
@@ -24,7 +46,12 @@ export function initShowMore() {
 function showContent(type, step, block) {
 	if(type == 'items') {
 		const items = block.querySelectorAll('li');
-		items
+		items.forEach((item, index) => {
+			if (index > (parseFloat(step) - 1)) {
+				setCSSProperty(item, '--height', 'auto');
+				setCSSProperty(item, 'overflow', 'auto');
+			}
+		})
 	}
 }
 }

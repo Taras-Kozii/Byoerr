@@ -23,34 +23,20 @@
 
 .list-packages {
   @include adaptive-property(padding-left, 20, 0, 40);
-  height: 300px;
   display: grid;
-  grid-template-rows: 3fr;
+  grid-template-rows: 0fr;
   row-gap: 32px;
   list-style-position: inside;
   counter-reset: ol-number;
-  // overflow-y: scroll;
-  // direction: rtl;
   border-left: 4px solid #0097FF;
 
-  // &::-webkit-scrollbar {
-  //   width: 4px;
-  // }
-
-  // &::-webkit-scrollbar-track {
-  //   background: #0097FF;
-  // }
-
-  // &::-webkit-scrollbar-thumb:hover {
-  //   background-color: #0097FF;
-  // }
-
   &__item {
-    text-align: start;
     display: flex;
     align-items: center;
     column-gap: 24px;
     list-style: none;
+    max-height: var(--height);
+    overflow: var(--overflow);
 
     &::before {
       flex: 0 0 auto;
@@ -63,6 +49,12 @@
       counter-increment: ol-number;
       content: counter(ol-number);
       color: $text-color-main;
+          max-height: var(--height);
+    overflow: var(--overflow)
+    }
+    > * {
+          max-height: var(--height);
+    overflow: var(--overflow);
     }
   }
 
