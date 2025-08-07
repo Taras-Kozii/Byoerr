@@ -4,7 +4,6 @@ import { header } from "./vars.js";
 
 export function initHeader() {
   let scrollHeaderTimeout;
-  console.log(header);
 
 window.addEventListener('scroll', (e) => {
   if (window.scrollY > 0) {
