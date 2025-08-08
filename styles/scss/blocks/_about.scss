@@ -24,9 +24,14 @@
       max-width: 47.8%;
     }
   }
-
   &__text {
-    overflow-y: scroll;
+    border-left: 4px solid #0097FF;
+    @include adaptive-property(padding-left, 20, 0, 40);
+
+    
+  }
+  &__text p.show {
+    margin-bottom: 0.625rem;
   }
 }
 
@@ -71,3 +76,18 @@
     grid-area: 3 / 4 / 4 / 5;
   }
 }
+
+[data-showmore-content] {
+  p,
+  li {
+    max-height: 0;
+    overflow: hidden;
+    transition: $transition-duraction-long;  
+  }
+}
+[data-showmore-content] p.show,
+[data-showmore-content] li.show {
+      max-height: 300px;
+      overflow: visible;
+      transition: $transition-duraction-long;
+  }
