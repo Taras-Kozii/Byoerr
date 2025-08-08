@@ -76,18 +76,3 @@
     grid-area: 3 / 4 / 4 / 5;
   }
 }
-
-[data-showmore-content] {
-  p,
-  li {
-    max-height: 0;
-    overflow: hidden;
-    transition: $transition-duraction-long;  
-  }
-}
-[data-showmore-content] p.show,
-[data-showmore-content] li.show {
-      max-height: 300px;
-      overflow: visible;
-      transition: $transition-duraction-long;
-  }
