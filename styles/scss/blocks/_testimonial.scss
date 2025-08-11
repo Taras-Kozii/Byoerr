@@ -41,4 +41,12 @@
   &__text p:not(:last-child) {
     margin-bottom: 0.625rem;
   }
+  &__raiting {
+    display: flex;
+  }
+}
+.star {
+  display: block;
+  width: 24px;
+  height: 24px;
 }

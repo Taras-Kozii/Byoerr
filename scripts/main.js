@@ -7,6 +7,7 @@ import { initHeader } from './header.js';
 import { initShowMore } from './showmore.js';
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
   initSlider();

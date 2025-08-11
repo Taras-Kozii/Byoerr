@@ -38,7 +38,7 @@
       row-gap: 3rem;
     }
     &__link {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       color: $text-color-main;
     }
   }
@@ -123,5 +123,12 @@
   span {
     opacity: 0;
     transform: scaleX(0);
+  }
+}
+.header.scrolling {
+  .burger:not(.active)::before,
+  .burger:not(.active)::after,
+  .burger:not(.active) span {
+    background-color: $text-color-main;
   }
 }

@@ -56,4 +56,12 @@
 .socials {
   display: flex;
   column-gap: 32px;
+  align-items: center;
+
+  svg path{
+    transition: $transition-duraction;
+    @include hover {
+      fill: #3898dd;
+    }
+  }
 }
