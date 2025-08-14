@@ -3,6 +3,7 @@
 .testimonial {
   background-color: $bg-color-main;
 }
+
 .slide-testimonial {
   &__body {
     @include adaptive-property(padding-inline, 20, 0, 40);
@@ -19,32 +20,39 @@
     justify-content: center;
     row-gap: 1rem;
   }
+
   &__top {
     display: flex;
     align-items: center;
     justify-content: center;
     column-gap: 1rem;
   }
+
   &__img {
     @include adaptive-property(width, 70, 0, 100);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     @include ibg;
   }
+
   &__name {
     font-weight: 600;
     line-height: 1.2;
   }
+
   &__text {
     line-height: 1.4;
   }
+
   &__text p:not(:last-child) {
     margin-bottom: 0.625rem;
   }
+
   &__raiting {
     display: flex;
   }
 }
+
 .star {
   display: block;
   width: 24px;

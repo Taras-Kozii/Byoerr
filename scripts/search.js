@@ -1,9 +1,9 @@
 'use strict';
 
 export function initSearch() {
-const btn = document.querySelector('.search__button')
-const input = document.querySelector('.search__input')
-const label = document.querySelector('.search')
+const btn = document.querySelector('.header-button')
+const input = document.querySelector('.header-input')
+const label = document.querySelector('.header-label')
 
 btn.addEventListener('click', () => {
   label.classList.add('open')

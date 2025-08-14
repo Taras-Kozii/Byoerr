@@ -49,6 +49,13 @@
     align-items: center;
     column-gap: 8px;
 
+    label {
+      min-width: fit-content;
+      display: flex;
+      align-items: center;
+      column-gap: 8px;
+    }
+
     input {
       padding: 0.5rem;
       outline: none;

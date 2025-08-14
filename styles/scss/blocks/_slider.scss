@@ -2,11 +2,13 @@
 
 .slider {
   min-width: 0;
+
   &__body {
     display: flex;
     flex-direction: column;
     @include adaptive-property(row-gap, 40, 0, 80);
   }
+
   &__top {
     display: flex;
     flex-wrap: wrap;
@@ -14,13 +16,16 @@
     justify-content: space-between;
     align-items: center;
   }
+
   &__buttons {
     display: none;
+
     @include on-mobile-l {
       display: flex;
       column-gap: 36px;
     }
   }
+
   &__button {
     display: flex;
     justify-content: center;
@@ -33,14 +38,17 @@
     transition: scale, $transition-duraction ease-in-out;
     @include adaptive-property(width, 30, 0, 60);
     @include adaptive-property(height, 30, 0, 60);
+
     @include hover {
       backdrop-filter: blur(24px);
       background: rgba(255, 255, 255, 0.2);
     }
   }
+
   &__button--prev {
     rotate: 180deg;
   }
+
   &__dots {
     max-width: fit-content;
     display: flex;
@@ -55,10 +63,12 @@
       background-color: #000;
       transition: $transition-duraction;
     }
+
     span.swiper-pagination-bullet-active {
       background-color: #fff;
     }
   }
+
   @include adaptive-property(width, 280, 0, 1280);
 }
 

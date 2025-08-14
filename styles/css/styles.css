@@ -323,32 +323,69 @@ h6 {
      object-position: center;
 }
 
-.search {
+.header-label {
+  position: relative;
+  border-radius: 16px;
+  padding: 0.8em 1.3em;
+  font-size: 17px;
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 22px;
-  height: 22px;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+.header-label.open {
+  background-color: #fff;
+}
+
+.header-input {
+  border: 0;
+  outline: 0;
+  background: none;
+  font: inherit;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  -webkit-transition: width 0.3s;
+  transition: width 0.3s;
+  max-width: 257px;
+  -webkit-transform-origin: center left;
+      -ms-transform-origin: center left;
+          transform-origin: center left;
+}
+.open .header-input {
+  width: 150px;
+}
+
+.header-button {
+  background: none;
+  border: 0;
+  outline: 0;
+  padding: 4px;
+  left: 19px;
+  width: 30px;
+  height: 30px;
+  margin-right: 4px;
+  color: #fff;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
   cursor: pointer;
 }
-.search svg {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+.header-button:hover {
+  color: #5d5a9f;
 }
-@media (max-width: 1024.9px) {
-  .search {
-    display: none;
-  }
+.open .header-button {
+  color: #012E4D;
+}
+
+.header.scrolling svg path {
+  stroke: #fff;
+}
+
+.header-label.open svg path {
+  stroke: #012E4D;
 }
 
 .slider {
@@ -573,9 +610,6 @@ h6 {
 }
 .header.scrolling .menu__link {
   color: #fff;
-}
-.header.scrolling svg path {
-  stroke: #fff;
 }
 
 .header.hidden {
@@ -1623,6 +1657,20 @@ h6 {
           align-items: center;
 }
 .form__item {
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+}
+.form__item label {
   min-width: -webkit-fit-content;
   min-width: -moz-fit-content;
   min-width: fit-content;

@@ -24,12 +24,12 @@
       max-width: 47.8%;
     }
   }
+
   &__text {
     border-left: 4px solid #0097FF;
     @include adaptive-property(padding-left, 20, 0, 40);
-
-    
   }
+
   &__text p.show {
     margin-bottom: 0.625rem;
   }
@@ -47,6 +47,7 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(3, 1fr);
   @include adaptive-property(gap, 12, 0, 24);
+
   @include hover-pseudo(' .masonry-about__item img') {
     filter: blur(3px);
   }
@@ -79,9 +80,11 @@
     grid-area: 3 / 4 / 4 / 5;
   }
 }
-    .masonry-about .masonry-about__item img {
-      transition: $transition-duraction ease-in-out;
-      @include hover {
-        filter: blur(0px);
-      }
-    }
+
+.masonry-about .masonry-about__item img {
+  transition: $transition-duraction ease-in-out;
+
+  @include hover {
+    filter: blur(0px);
+  }
+}
