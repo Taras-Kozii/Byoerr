@@ -201,7 +201,7 @@
     }
   }
 
-  @media (hover: none) {
+  @media (hover: none) and (pointer: coarse) {
     &:active,
     &:focus,
     &:focus-within {
@@ -217,9 +217,10 @@
     }
   }
 
-  @media (hover: none) {
+  @media (hover: none) and (pointer: coarse) {
     &:active#{$pseudo},
-    &:focus#{$pseudo} &:focus-within#{$pseudo} {
+    &:focus#{$pseudo},
+    &:focus-within#{$pseudo} {
       @content;
     }
   }

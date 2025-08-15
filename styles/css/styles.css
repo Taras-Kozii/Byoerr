@@ -108,8 +108,8 @@ h6 {
     max-width: 100%;
   }
 }
-@media (hover: none) {
-  .fill-color:active::before, .fill-color:focus::before .fill-color:focus-within::before {
+@media (hover: none) and (pointer: coarse) {
+  .fill-color:active::before, .fill-color:focus::before, .fill-color:focus-within::before {
     max-width: 100%;
   }
 }
@@ -144,8 +144,8 @@ h6 {
     transition: 0.65s cubic-bezier(0.19, 1, 0.22, 1);
   }
 }
-@media (hover: none) {
-  .shine:active::before, .shine:focus::before .shine:focus-within::before {
+@media (hover: none) and (pointer: coarse) {
+  .shine:active::before, .shine:focus::before, .shine:focus-within::before {
     left: 120%;
     -webkit-transition: 0.65s cubic-bezier(0.19, 1, 0.22, 1);
     transition: 0.65s cubic-bezier(0.19, 1, 0.22, 1);
@@ -472,7 +472,7 @@ h6 {
     background: rgba(255, 255, 255, 0.2);
   }
 }
-@media (hover: none) {
+@media (hover: none) and (pointer: coarse) {
   .slider__button:active, .slider__button:focus, .slider__button:focus-within {
     backdrop-filter: blur(24px);
     background: rgba(255, 255, 255, 0.2);
@@ -1038,8 +1038,8 @@ h6 {
             filter: blur(3px);
   }
 }
-@media (hover: none) {
-  .masonry-about:active .masonry-about__item img, .masonry-about:focus .masonry-about__item img .masonry-about:focus-within .masonry-about__item img {
+@media (hover: none) and (pointer: coarse) {
+  .masonry-about:active .masonry-about__item img, .masonry-about:focus .masonry-about__item img, .masonry-about:focus-within .masonry-about__item img {
     -webkit-filter: blur(3px);
             filter: blur(3px);
   }
@@ -1086,7 +1086,7 @@ h6 {
             filter: blur(0px);
   }
 }
-@media (hover: none) {
+@media (hover: none) and (pointer: coarse) {
   .masonry-about .masonry-about__item img:active, .masonry-about .masonry-about__item img:focus, .masonry-about .masonry-about__item img:focus-within {
     -webkit-filter: blur(0px);
             filter: blur(0px);
@@ -1177,8 +1177,8 @@ h6 {
             filter: blur(0);
   }
 }
-@media (hover: none) {
-  .destinations-slider__item:active .slide-destinations__content, .destinations-slider__item:focus .slide-destinations__content .destinations-slider__item:focus-within .slide-destinations__content {
+@media (hover: none) and (pointer: coarse) {
+  .destinations-slider__item:active .slide-destinations__content, .destinations-slider__item:focus .slide-destinations__content, .destinations-slider__item:focus-within .slide-destinations__content {
     opacity: 1;
     -webkit-transform: translate(0, 0);
         -ms-transform: translate(0, 0);
@@ -1340,8 +1340,8 @@ h6 {
             filter: blur(3px);
   }
 }
-@media (hover: none) {
-  .masonry-packages:active .masonry-packages__item img, .masonry-packages:focus .masonry-packages__item img .masonry-packages:focus-within .masonry-packages__item img {
+@media (hover: none) and (pointer: coarse) {
+  .masonry-packages:active .masonry-packages__item img, .masonry-packages:focus .masonry-packages__item img, .masonry-packages:focus-within .masonry-packages__item img {
     -webkit-filter: blur(3px);
             filter: blur(3px);
   }
@@ -1388,7 +1388,7 @@ h6 {
             filter: blur(0px);
   }
 }
-@media (hover: none) {
+@media (hover: none) and (pointer: coarse) {
   .masonry-packages .masonry-packages__item img:active, .masonry-packages .masonry-packages__item img:focus, .masonry-packages .masonry-packages__item img:focus-within {
     -webkit-filter: blur(0px);
             filter: blur(0px);
@@ -1596,7 +1596,7 @@ h6 {
     fill: #3898dd;
   }
 }
-@media (hover: none) {
+@media (hover: none) and (pointer: coarse) {
   .socials svg path:active, .socials svg path:focus, .socials svg path:focus-within {
     fill: #3898dd;
   }
