@@ -86,10 +86,6 @@ h6 {
   font-size: inherit;
 }
 
-:root {
-  --primary: #000;
-}
-
 .fill-color {
   position: relative;
   display: inline-block;
@@ -103,7 +99,7 @@ h6 {
   overflow: hidden;
   max-width: 0;
   border-bottom: 2px solid currentColor;
-  color: #3898dd;
+  color: #1699f7;
   -webkit-transition: max-width 0.3s ease-in-out;
   transition: max-width 0.3s ease-in-out;
 }
@@ -324,16 +320,21 @@ h6 {
 }
 
 .header-label {
+  display: none;
   position: relative;
   border-radius: 16px;
   padding: 0.8em 1.3em;
   font-size: 17px;
   background-color: transparent;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-transition: background-color 0.3s;
   transition: background-color 0.3s;
+}
+@media (min-width: 767.98px) {
+  .header-label {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 .header-label.open {
   background-color: #fff;
@@ -354,6 +355,7 @@ h6 {
   -webkit-transform-origin: center left;
       -ms-transform-origin: center left;
           transform-origin: center left;
+  color: #0F1922;
 }
 .open .header-input {
   width: 150px;
@@ -628,8 +630,8 @@ h6 {
     height: 100svh;
     width: 100%;
     padding: 100px 30px 30px;
-    background: -webkit-gradient(linear, left bottom, left top, from(#012E4D), color-stop(70%, #3898dd), to(#fff));
-    background: linear-gradient(0deg, #012E4D 0%, #3898dd 70%, #fff 100%);
+    background: -webkit-gradient(linear, left bottom, left top, from(#012E4D), color-stop(70%, #296188), to(#fff));
+    background: linear-gradient(0deg, #012E4D 0%, #296188 70%, #fff 100%);
     -webkit-transition: 0.3s;
     transition: 0.3s;
     overflow: auto;
@@ -876,6 +878,7 @@ h6 {
       -ms-flex-direction: column;
           flex-direction: column;
   row-gap: 1.5rem;
+  margin-top: 35px;
 }
 .hero__title {
   font-family: "Outfit", sans-serif;
@@ -999,7 +1002,7 @@ h6 {
   }
 }
 .about__text {
-  border-left: 4px solid #0097FF;
+  border-left: 4px solid #0097ff;
   padding-left: 40px;
 }
 @media (max-width: 1440px) {
@@ -1231,7 +1234,7 @@ h6 {
           flex-direction: column;
   list-style-position: inside;
   counter-reset: ol-number;
-  border-left: 4px solid #0097FF;
+  border-left: 4px solid #0097ff;
 }
 @media (max-width: 1440px) {
   .list-packages {
@@ -1645,9 +1648,9 @@ h6 {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-column-gap: 20px;
      -moz-column-gap: 20px;
           column-gap: 20px;
@@ -1655,6 +1658,13 @@ h6 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media (min-width: 767.98px) {
+  .form {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
 }
 .form__item {
   min-width: -webkit-fit-content;
@@ -1694,30 +1704,52 @@ h6 {
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.5;
+  font-size: 1.25rem;
 }
 .form__item input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.4);
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.5;
+  font-size: 1.25rem;
 }
 .form__item input:-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.4);
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.5;
+  font-size: 1.25rem;
 }
 .form__item input::-ms-input-placeholder {
   color: rgba(255, 255, 255, 0.4);
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.5;
+  font-size: 1.25rem;
 }
 .form__item input::placeholder {
   color: rgba(255, 255, 255, 0.4);
   font-size: 1.25rem;
   font-weight: 400;
   line-height: 1.5;
+  font-size: 1.25rem;
+}
+@media (max-width: 1440px) {
+  .form__item input::-webkit-input-placeholder {
+    font-size: calc(1rem + (0.25) * (100vw - 20rem) / (70));
+  }
+  .form__item input::-moz-placeholder {
+    font-size: calc(1rem + (0.25) * (100vw - 20rem) / (70));
+  }
+  .form__item input:-ms-input-placeholder {
+    font-size: calc(1rem + (0.25) * (100vw - 20rem) / (70));
+  }
+  .form__item input::-ms-input-placeholder {
+    font-size: calc(1rem + (0.25) * (100vw - 20rem) / (70));
+  }
+  .form__item input::placeholder {
+    font-size: calc(1rem + (0.25) * (100vw - 20rem) / (70));
+  }
 }
 .form__item input:focus::-webkit-input-placeholder {
   opacity: 0;

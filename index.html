@@ -4,10 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Byoerr</title>
-    <link rel="shortcut icon" href="" type="image/x-icon" />
-    <!-- ПЕРЕДЗАВАНТАЖЕННЯ КАРТИНОК -->
+    <link
+      rel="shortcut icon"
+      href="./images/icons/favicon.ico"
+      type="image/x-icon"
+    />
     <link rel="preload" as="image" href="./images/hero/hero.webp" />
-    <!-- ШРИФТИ -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,7 +22,6 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap"
       rel="stylesheet"
     />
-    <!-- ------------------------------------------------------------------- -->
     <link rel="stylesheet" href="./styles/css/styles.min.css" />
     <link
       rel="preload"
@@ -39,7 +40,7 @@
       <header class="header">
         <div class="header__container">
           <div class="header__content">
-            <a href="#" class="logo header__logo logo">
+            <a href="#" class="logo header__logo logo" aria-label="logo-button">
               <svg
                 width="40.000000"
                 height="40.000000"
@@ -112,8 +113,8 @@
                 <span></span>
               </button>
             </div>
-            <label class="header-label">
-              <button class="header-button">
+            <div class="header-label">
+              <button class="header-button" aria-label="open-input-search">
                 <svg
                   width="22.000000"
                   height="22.000000"
@@ -162,7 +163,7 @@
                 </svg>
               </button>
               <input type="text" class="header-input" placeholder="Search…" />
-            </label>
+            </div>
           </div>
         </div>
       </header>
@@ -199,7 +200,7 @@
                   <span>Book a call</span>
                 </a>
               </div>
-              <button class="hero__play">
+              <button class="hero__play" aria-label="button-play-video">
                 <svg
                   width="83"
                   height="98"

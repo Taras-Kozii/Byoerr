@@ -31,12 +31,12 @@
   overflow: clip;
 
   // Притискаємо footer
-  >main {
+  > main {
     flex: 1 1 auto;
   }
 
   // Фікс для слайдерів
-  >* {
+  > * {
     min-width: 0;
   }
 }

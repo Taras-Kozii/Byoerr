@@ -9,10 +9,12 @@
       height: 100svh;
       width: 100%;
       padding: 100px 30px 30px;
-      background: linear-gradient(0deg,
-          $bg-color-main 0%,
-          #3898dd 70%,
-          #fff 100%);
+      background: linear-gradient(
+        0deg,
+        $bg-color-main 0%,
+        #296188 70%,
+        #fff 100%
+      );
       transition: $transition-duraction;
       overflow: auto;
 
@@ -140,7 +142,6 @@
 }
 
 .header.scrolling {
-
   .burger:not(.active)::before,
   .burger:not(.active)::after,
   .burger:not(.active) span {

@@ -78,12 +78,15 @@
 
 //=====================================SEARCH
 .header-label {
+  display: none;
+  @include on-mobile-l {
+    display: flex;
+  }
   position: relative;
   border-radius: $radius-s;
   padding: 0.8em 1.3em;
   font-size: 17px;
   background-color: transparent;
-  display: flex;
   transition: background-color $transition-duraction;
 
   &.open {
@@ -103,6 +106,7 @@
   transition: width $transition-duraction;
   max-width: 257px;
   transform-origin: center left;
+  color: $bg-color-2;
 
   .open & {
     width: 150px;

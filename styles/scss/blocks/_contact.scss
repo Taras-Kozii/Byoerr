@@ -38,10 +38,14 @@
   border-radius: $radius-s;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   column-gap: 20px;
   row-gap: 1.5rem;
   align-items: center;
+
+  @include on-mobile-l {
+    justify-content: space-between;
+  }
 
   &__item {
     min-width: fit-content;
@@ -67,6 +71,7 @@
       font-size: 1.25rem;
       font-weight: 400;
       line-height: 1.5;
+      @include adaptive-property(font-size, 1, 0, 1.25, rem);
     }
 
     input:focus::placeholder {
@@ -87,7 +92,6 @@
       -webkit-box-shadow: none;
       background-color: none;
     }
-
   }
 
   &__submit {

@@ -27,7 +27,7 @@
   flex-direction: column;
   list-style-position: inside;
   counter-reset: ol-number;
-  border-left: 4px solid #0097FF;
+  border-left: 4px solid #0097ff;
 
   &__item {
     display: flex;
@@ -67,7 +67,6 @@
     font-weight: 600;
     line-height: 1.2;
   }
-
 }
 
 .masonry-packages {
@@ -83,7 +82,7 @@
   grid-template-rows: repeat(4, 1fr);
   @include adaptive-property(gap, 12, 0, 24);
 
-  @include hover-pseudo(' .masonry-packages__item img') {
+  @include hover-pseudo(" .masonry-packages__item img") {
     filter: blur(3px);
   }
 
