@@ -16,7 +16,7 @@
         #fff 100%
       );
       transition: $transition-duraction;
-      overflow: auto;
+      overflow: scroll;
 
       &::before {
         content: "";

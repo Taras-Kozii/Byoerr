@@ -634,7 +634,7 @@ h6 {
     background: linear-gradient(0deg, #012E4D 0%, #296188 70%, #fff 100%);
     -webkit-transition: 0.3s;
     transition: 0.3s;
-    overflow: auto;
+    overflow: scroll;
   }
   .menu__body::before {
     content: "";
