@@ -202,6 +202,8 @@
   }
 
   @media (hover: none) {
+    &:active,
+    &:focus,
     &:focus-within {
       @content;
     }
@@ -216,7 +218,8 @@
   }
 
   @media (hover: none) {
-    &:focus-within#{$pseudo} {
+    &:active#{$pseudo},
+    &:focus#{$pseudo} &:focus-within#{$pseudo} {
       @content;
     }
   }
