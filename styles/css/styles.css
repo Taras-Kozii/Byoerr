@@ -627,7 +627,7 @@ h6 {
     position: fixed;
     top: 0;
     left: -100%;
-    min-height: 100svh;
+    height: 100svh;
     width: 100%;
     padding: 100px 30px 30px;
     background: -webkit-gradient(linear, left bottom, left top, from(#012E4D), color-stop(70%, #296188), to(#fff));
